@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+ <PropertyList>
+
+  <sim  include="Nasal/views.xml">
+ 
+    <author>Vodoun da Vinci</author>
+    <status>alpha</status>
+  
+    <fuel-fraction>1.0</fuel-fraction>
+  
+  <systems>
+   <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+   </electrical>
+  <autopilot>
+        <path>Aircraft/P-39D/autopilot.xml</path>
+  </autopilot>
+  </systems> 
+
+    <sound>
+      <audible>true</audible>
+      <path>Aircraft/P-39D/Sounds/P-39D-sound.xml</path>
+    </sound>
+
+    <startup>
+     <splash-texture>Aircraft/P-39D/P-39D-splash.jpg</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/P-39D/Models/P-39D.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+   <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/P-39D/Models/Effects/guns/submodels.xml</path>
+    </submodels>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
+        <int type="bool" n="6" alias="/smoke/active"> 0 </int>                     <!--  6 start smoke -->
+        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3" alias="/smoke/colors/knob-red">1</float>                      <!-- 3 smoke mixer red setting -->
+        <float n="4" alias="/smoke/colors/knob-green">1</float>                    <!-- 4 smoke mixer green setting -->
+        <float n="5" alias="/smoke/colors/knob-blue">1</float>                     <!-- 5 smoke mixer blue setting -->
+        <string n="9" type="string" />                                             <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>P-39D</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+      <key>
+        <name>e</name>
+        <desc>Guns fire</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/P-39D-menu.xml"/>
+
+  </sim>
+
+  <yasim>
+    <P-39D>
+      <pilot-lb>128</pilot-lb>
+    </P-39D>
+  </yasim>
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <running>true</running>
+    </engine>
+  </engines>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <tank-num type="int">0</tank-num>
+        <level-gal_us archive="y">2070</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+
+  <controls>
+    <armament>
+      <trigger type="bool">false</trigger>
+      <master-arm type="bool">true</master-arm>
+      <position-norm type="int">1</position-norm>
+    </armament>
+    <flight>
+      <elevator-trim>-0.04</elevator-trim>
+    </flight>
+  </controls>
+
+  <input>
+    <keyboard include="Nasal/P-39D-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/P-39D/Nasal/doors.nas</file>
+    </doors>
+    <p39>
+      <file>Aircraft/P-39D/Nasal/liveries.nas</file>
+      <file>Aircraft/P-39D/Nasal/light.nas</file>
+    </p39>
+    <guns>
+      <file>Aircraft/P-39D/Nasal/weapons.nas</file>
+      <file>Aircraft/P-39D/Nasal/revi.nas</file>
+    </guns>
+  </nasal>
+ </PropertyList>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="P-39D-base.xml">
+
+  <sim>
+
+    <description>P-39D</description>
+    <author>Vodoun da Vinci, Emmanuel BARANGER ,and Dudes</author>
+    <flight-model>yasim</flight-model>
+    <aero>P-39D-yasim</aero>
+
+  </sim>
+
+</PropertyList>
+

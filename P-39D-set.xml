@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- <PropertyList include="P-39D-yasim-cnf.xml"> -->
+<PropertyList include="P-39D-yasim-cnf.xml">
+
+  <sim>
+
+    <description>P-39D</description>
+    <author>Vodoun da Vinci, Emmanuel BARANGER ,and Dudes</author>
+
+    <rating>
+      <FDM type="int"> unrated </FDM>
+      <systems type="int"> unrated </systems>
+      <cockpit type="int"> unrated</cockpit>
+      <model type="int"> unrated</model>
+    </rating>
+
+  </sim>
+
+</PropertyList>
+
